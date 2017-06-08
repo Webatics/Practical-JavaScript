@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Practical JavaScript</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Practical JavaScript</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+    <div class="container">
+    	<h1 class="text-center">Todos</h1>
+    	<hr>
+
+      <div class="row">
+        <div class="col-md-6 todos-col">
+          <div>
+            <!-- <button class="btn btn-raised btn-primary" onclick="handlers.displayTodos()">Display Todos</button> -->
+            <button class="btn btn-raised btn-success" onclick="handlers.toggleAll()">Toggle All</button>
+          </div><br>
+          <div>
+            <button class="btn btn-raised btn-warning" onclick="handlers.addTodo()">Add Task</button>
+            <input type="text" id="addTodoTextInput" placeholder="add a task here...">
+          </div><br>
+
+          <div>
+            <button class="btn btn-raised btn-info" onclick="handlers.changeTodo()">Change Todo</button>
+            <input type="number" id="changeTodoPositionInput" placeholder="postion of the task">
+            <input type="text" id="changeTodoTextInput" placeholder="New task text">
+          </div><br>
+
+          <div>
+            <button class="btn btn-raised btn-danger" onclick="handlers.deleteTodo()">Delete Task</button>
+            <input type="number" id="deleteTodoPositionInput" placeholder="Task to delete">
+          </div><br>
+
+          <div>
+            <button class="btn btn-raised btn-default" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+            <input type="number" id="toggleCompletedTodoPositionInput" placeholder="Position of Completed">
+          </div>
+        </div>
+
+        <div class="col-md-6 todos-col well">
+          <ul></ul>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
